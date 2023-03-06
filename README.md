@@ -36,44 +36,6 @@ pip install -r requirements.txt
 4.Crea la base de datos
 py manage.py migrate
 
-A continuación te proporciono un ejemplo de cómo crear un archivo README.md para un proyecto de Django en Python:
-
-Nombre del proyecto
-Aquí va el nombre de tu proyecto de Django.
-
-Descripción
-En esta sección, escribe una descripción breve y clara de lo que hace tu proyecto de Django. Por ejemplo:
-
-Este proyecto es una aplicación web para gestionar una lista de tareas. Permite a los usuarios crear nuevas tareas,
-marcar tareas como completadas y eliminar tareas de la lista.
-
-Requisitos
-Aquí debes mencionar los requisitos necesarios para instalar y ejecutar tu proyecto de Django. Por ejemplo:
-
-Python 3.6 o superior
-Django 3.1 o superior
-PostgreSQL 12.4 o superior
-Instalación
-Aquí debes explicar los pasos necesarios para instalar y configurar tu proyecto de Django. Por ejemplo:
-
-Clona este repositorio en tu máquina local.
-
-Crea un entorno virtual y actívalo:
-
-bash
-Copy code
-python3 -m venv myenv
-source myenv/bin/activate
-Instala las dependencias:
-Copy code
-pip install -r requirements.txt
-Crea la base de datos:
-Copy code
-python manage.py migrate
-Inicia el servidor de desarrollo:
-Copy code
-python manage.py runserver
-
 #Uso
 Para empezar a usar la API:
 
