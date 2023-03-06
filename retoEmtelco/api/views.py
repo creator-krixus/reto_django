@@ -19,24 +19,20 @@ class VulnerabilityView(View):
         return super().dispatch(request, *args, **kwargs)
 
     def get(self, request, id=0):
-        # response = requests.get(
-        #     "https://services.nvd.nist.gov/rest/json/cves/2.0")
-        # data = response.json()
-        # vulnerabilities = list(Vulnerability.objects.values())
+        response = requests.get(
+            "https://services.nvd.nist.gov/rest/json/cves/2.0")
+        data = response.json()
+        vulnerabilities = list(Vulnerability.objects.values())
 
-        # for vuln_data in data['vulnerabilities']:
-        #     for vul in vulnerabilities:
-        #         if (vuln_data['cve']['id'] != vul['vuln_id']):
-        #             print('hello')
-        #             datos = {'message': 'Success',
-        #                      'vulnerabilities': vulnerabilities}
-        #     vuln_id = vuln_data['cve']['id']
-        #     description = vuln_data['cve']['descriptions'][0]['value']
-        #     # severity = vuln_data['cve']['metrics']['cvssMetricV2'][0]['baseSeverity']
-        #     severity = 'HIGH'
-        #     vulnerability = Vulnerability(
-        #         vuln_id=vuln_id, description=description, severity=severity)
-        #     vulnerability.save()
+        if len(vulnerabilities) == 0:
+            for vuln_data in data['vulnerabilities']:
+                vuln_id = vuln_data['cve']['id']
+                description = vuln_data['cve']['descriptions'][0]['value']
+                # severity = vuln_data['cve']['metrics']['cvssMetricV2'][0]['baseSeverity']
+                severity = 'HIGH'
+                vulnerability = Vulnerability(
+                    vuln_id=vuln_id, description=description, severity=severity)
+                vulnerability.save()
 
         if (id > 0):
             vulnerabilities = list(
