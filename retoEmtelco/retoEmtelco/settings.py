@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'retoEmtelco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'localhost',
-        'PORT': '3306',
+        'HOST': 'containers-us-west-53.railway.app',
+        'PORT': '7783',
         'USER': 'root',
-        'PASSWORD': '1234',
-        'NAME': 'emtelco',
+        'PASSWORD': 'gmcFZ3UAENGhTB45a5IO',
+        'NAME': 'railway',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
